@@ -241,8 +241,61 @@ const Chatbot = () => {
   //   }
   // ]
 
+  async function handleDefaultQuestions(defaultQuestion : any){
+    setLoading(true);
 
+    setMessageState((state) => ({
+      ...state,
+      messages: [
+        ...state.messages,
+        {
+          type: 'userMessage',
+          message: defaultQuestion,
+        },
+      ],
+      pending: undefined,
+    }));
 
+    try {
+      
+      const response = await fetch(
+        'https://solutions.it-marketing.website/raja-chat-bot-api',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            user_Message: defaultQuestion,
+            language: selectedLanguage,
+            chatId: id,
+          }),
+        },
+      );
+
+      if (response.status !== 200) {
+        const error = await response.json();
+        throw new Error(error.message);
+      }
+      const data = await response.json();
+      if(data.status == "success"){
+          setMessageState((state) => ({
+          ...state,
+          messages: [
+            ...state.messages,
+            {
+              type: 'apiMessage',
+              message: data.bot_reply,
+            },
+          ],
+          pending: undefined,
+        }));
+      }
+      setLoading(false);
+    } catch (error) {
+      console.log("error")
+    }
+  }
 
 
   //handle form submission
@@ -271,6 +324,7 @@ const Chatbot = () => {
           ],
           pending: undefined,
         }));
+        
   
         console.log('user message : ', question);
   
@@ -279,9 +333,7 @@ const Chatbot = () => {
         setMessageState((state) => ({ ...state, pending: '' }));
   
   
-  setSelectedQuestion(question);
-  
-        console.log(selectedQuestion)
+        
   
         // console.log(question)
         // products
@@ -621,7 +673,8 @@ const Chatbot = () => {
       {/* chat top header =======================*/}
       <div className={`${styles.chatTopBar} d-flex flex-row `}>
         <div className="col-12 text-center d-flex flex-row justify-content-between px-2">
-          <Image src="/chat-top-bar.png" alt="AI" width={150} height={30} />
+          {/* <Image src="/chat-top-bar.png" alt="AI" width={150} height={30} /> */}
+          <h5>Raja jwellers</h5>
           <button
             className="close-button"
             onClick={handleCloseChat}
@@ -637,7 +690,7 @@ const Chatbot = () => {
         {/* language switch message =================*/}
         <div className={styles.botMessageContainerWrapper}>
           <div className="d-flex justify-content-center pt-1">
-            <Image src="/chat-logo.png" alt="AI" width={180} height={50} />
+            <Image src="/Asset-1-2.png" alt="AI" width={180} height={50} />
           </div>
 
           <div
@@ -664,18 +717,7 @@ const Chatbot = () => {
                     <button
                       className=" px-3 py-2 "
                       onClick={() => {
-                        setSelectedQuestion('Where are you located at?');
-                        setMessageState((state) => ({
-                          ...state,
-                          messages: [
-                            ...state.messages,
-                            {
-                              type: 'userMessage',
-                              message: 'What is the 22kt Gold rate today?',
-                            },
-                          ],
-                          pending: undefined,
-                        }));
+                        handleDefaultQuestions('What is the 22kt Gold rate today?');
                       }}
                     >
                       What is the 22kt Gold rate today?
@@ -683,18 +725,7 @@ const Chatbot = () => {
                     <button
                       className="px-3 py-2 mt-2"
                       onClick={() => {
-                        setSelectedLanguage('Sinhala');
-                        setMessageState((state) => ({
-                          ...state,
-                          messages: [
-                            ...state.messages,
-                            {
-                              type: 'userMessage',
-                              message: 'Where are you located at?',
-                            },
-                          ],
-                          pending: undefined,
-                        }));
+                        handleDefaultQuestions('Where are you located at?');
                       }}
                     >
                       Where are you located at?
@@ -702,18 +733,7 @@ const Chatbot = () => {
                     <button
                       className="px-3 py-2 mt-2"
                       onClick={() => {
-                        setSelectedQuestion('What are your opening hours?');
-                        setMessageState((state) => ({
-                          ...state,
-                          messages: [
-                            ...state.messages,
-                            {
-                              type: 'userMessage',
-                              message: 'What are your opening hours?',
-                            },
-                          ],
-                          pending: undefined,
-                        }));
+                        handleDefaultQuestions('What are your opening hours?');
                       }}
                     >
                       What are your opening hours?
@@ -721,18 +741,7 @@ const Chatbot = () => {
                     <button
                       className="px-3 py-2 mt-2"
                       onClick={() => {
-                        setSelectedQuestion('What is the old gold exchange rate?');
-                        setMessageState((state) => ({
-                          ...state,
-                          messages: [
-                            ...state.messages,
-                            {
-                              type: 'userMessage',
-                              message: 'What is the old gold exchange rate?',
-                            },
-                          ],
-                          pending: undefined,
-                        }));
+                        handleDefaultQuestions('What is the old gold exchange rate?');
                       }}
                     >
                       What is the old gold exchange rate?
@@ -740,18 +749,7 @@ const Chatbot = () => {
                     <button
                       className="px-3 py-2 mt-2"
                       onClick={() => {
-                        setSelectedQuestion('What&#39;s the price of gold coin today?');
-                        setMessageState((state) => ({
-                          ...state,
-                          messages: [
-                            ...state.messages,
-                            {
-                              type: 'userMessage',
-                              message: "What's the price of gold coin today?",
-                            },
-                          ],
-                          pending: undefined,
-                        }));
+                        handleDefaultQuestions("What's the price of gold coin today?");
                       }}
                     >
                       What&#39;s the price of gold coin today?
@@ -759,18 +757,7 @@ const Chatbot = () => {
                     <button
                       className="px-3 py-2 mt-2"
                       onClick={() => {
-                        setSelectedQuestion('I&#39;m not in Sri Lanka, I need to get some details?');
-                        setMessageState((state) => ({
-                          ...state,
-                          messages: [
-                            ...state.messages,
-                            {
-                              type: 'userMessage',
-                              message: "I'm not in Sri Lanka, I need to get some details?",
-                            },
-                          ],
-                          pending: undefined,
-                        }));
+                        handleDefaultQuestions("I'm not in Sri Lanka, I need to get some details?");
                       }}
                     >
                       I&#39;m not in Sri Lanka, I need to get some details?
@@ -778,18 +765,7 @@ const Chatbot = () => {
                     <button
                       className="px-3 py-2 mt-2"
                       onClick={() => {
-                        setSelectedQuestion('Do you do custom-made jewelry?');
-                        setMessageState((state) => ({
-                          ...state,
-                          messages: [
-                            ...state.messages,
-                            {
-                              type: 'userMessage',
-                              message: 'Do you do custom-made jewelry?',
-                            },
-                          ],
-                          pending: undefined,
-                        }));
+                        handleDefaultQuestions('Do you do custom-made jewelry?');
                       }}
                     >
                       Do you do custom-made jewelry?
@@ -797,18 +773,7 @@ const Chatbot = () => {
                     <button
                       className="px-3 py-2 mt-2"
                       onClick={() => {
-                        setSelectedQuestion('Can I get a quotation for a custom-made jewelry?');
-                        setMessageState((state) => ({
-                          ...state,
-                          messages: [
-                            ...state.messages,
-                            {
-                              type: 'userMessage',
-                              message: 'Can I get a quotation for a custom-made jewelry?',
-                            },
-                          ],
-                          pending: undefined,
-                        }));
+                        handleDefaultQuestions('Can I get a quotation for a custom-made jewelry?');
                       }}
                     >
                       Can I get a quotation for a custom-made jewelry?
@@ -991,7 +956,7 @@ const Chatbot = () => {
                             Connect with Live Agent
                           </button>
                         )}
-                        {message.type === 'productMessage' && (
+                        {/* {message.type === 'productMessage' && (
                           <button
                             className=" rounded text-white py-2 px-3 "
                             style={{
@@ -1005,7 +970,7 @@ const Chatbot = () => {
                           >
                             View Products and Services
                           </button>
-                        )}
+                        )} */}
                         {/* {message.type === 'cardMessage' && (
                           <div className="d-flex flex-column card mb-2">
                             <div style={{ width: '235px' }}>
