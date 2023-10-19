@@ -155,10 +155,10 @@ aside.EmojiPickerReact.epr-main{
 }
 
 .welcome-language-select button{
-  color: #111111;
+  color: #fff;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  background-color: #d197f7;
+  background-color: #561f7a;
   border-radius: 8px !important;
   width: 100%;
   text-align: start;

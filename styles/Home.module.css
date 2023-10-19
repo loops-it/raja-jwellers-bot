@@ -343,7 +343,7 @@
 }
 
 .chatTopBar {
-  background-color: #303030;
+  background-color: #561f7a;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 20px 10px;
@@ -588,22 +588,6 @@
   width: 100%;
 }
 
-.boxColor1 {
-  background-color: rgb(48, 48, 48);
-}
-
-.boxColor2 {
-  background-color: #695454;
-}
-
-.boxColor3 {
-  background-color: #a33333;
-}
-
-.boxColor4 {
-  background-color: #A90e09;
-}
-
 .boxColor1,
 .boxColor2,
 .boxColor3,
@@ -617,6 +601,28 @@
 .boxColor4 p {
   color: #fff !important;
 }
+
+.boxColor1 {
+  background-color: #561f7a;
+}
+
+.boxColor2 {
+  background-color: #fff!important;
+  border: solid 1px #561f7a !important;
+}
+.boxColor2 p{
+  color: #561f7a !important;
+}
+
+.boxColor3 {
+  background-color: #a33333;
+}
+
+.boxColor4 {
+  background-color: #A90e09;
+}
+
+
 .avatar{
   border-radius: 50%;
 }
