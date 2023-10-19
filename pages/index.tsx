@@ -68,14 +68,14 @@ export default function Home() {
           <div className='d-flex flex-column justify-content-center align-items-center'>
             <div className={`${styles.chatSelectBox}  col-12  p-3 d-flex flex-column align-items-center ${styles.boxColor1} me-lg-2 mb-2 mb-lg-0`}>
               <Link href={'/chatbot'} >
-                <p className='text-dark text-uppercase mb-0'><strong>CONNECT WITH AI BOT</strong></p>
+                <p className='text-dark text-uppercase mb-0'><strong>Connect with Chat Assistant</strong></p>
               </Link>
             </div>
-            <div className={`${styles.chatSelectBox} col-12  p-3 d-flex flex-column align-items-center ${styles.boxColor2} me-lg-2 mb-2 mb-lg-0`}>
+            {/* <div className={`${styles.chatSelectBox} col-12  p-3 d-flex flex-column align-items-center ${styles.boxColor2} me-lg-2 mb-2 mb-lg-0`}>
               <Link href={'/liveAgent'} >
                 <p className='text-dark text-uppercase mb-0'><strong>CONNECT WITH A LIVE AGENT</strong></p>
               </Link>
-            </div>
+            </div> */}
             
             {/* <div className={`${styles.chatSelectBox} col-12  p-3 d-flex flex-column align-items-center ${styles.boxColor3} me-lg-2 mb-2 mb-lg-0`}>
               <Link href={'/videobot'} >
