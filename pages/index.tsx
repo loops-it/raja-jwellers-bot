@@ -54,7 +54,7 @@ export default function Home() {
                 width={150}
                 height={30}
               /> */}
-              <h5>Raja jwellers</h5>
+              <h5>Raja jewellers</h5>
         </div>
       </div>
         <div className={`${styles.chatContainer}  d-flex flex-column align-items-center text-center`}>

@@ -674,7 +674,7 @@ const Chatbot = () => {
       <div className={`${styles.chatTopBar} d-flex flex-row `}>
         <div className="col-12 text-center d-flex flex-row justify-content-between px-2">
           {/* <Image src="/chat-top-bar.png" alt="AI" width={150} height={30} /> */}
-          <h5>Raja jwellers</h5>
+          <h5>Raja jewellers</h5>
           <button
             className="close-button"
             onClick={handleCloseChat}
@@ -710,7 +710,7 @@ const Chatbot = () => {
                   height={150}
                 />
                 <p className="mt-2">
-                  Hello, Welcome to Raja Jwellers. 
+                  Hello, Welcome to Raja jewellers. 
                 </p>
                 <div className="d-flex flex-column welcome-language-select w-100">
                   <div className="col-12 pe-1">
@@ -871,20 +871,8 @@ const Chatbot = () => {
             //   index === chatMessages.length - 1;
             const notSureMessages = [
               "Hmm, I'm not sure..",
-              "Hmm.. I'm not sure.",
-              "I'm sorry",
-              'There is no question',
-              'Sorry,',
               'ප්රශ්නයක් නැත',
-              'මට කණගාටුයි',
-              'සමාවන්න,',
-              'හ්ම්, මට විශ්වාස නෑ',
-              'හ්ම්.. මට විශ්වාස නෑ.',
               'கேள்வியே இல்லை',
-              'என்னை மன்னிக்கவும்',
-              'மன்னிக்கவும்,',
-              'ஹ்ம்ம், எனக்கு உறுதியாக தெரியவில்லை',
-              'ம்ம்ம்.. எனக்கு நிச்சயமில்லை.',
             ];
             const isLastApiMessageWithNotSure =
               message.type === 'apiMessage' &&

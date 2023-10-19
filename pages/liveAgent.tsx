@@ -328,7 +328,7 @@ const LiveAgent = () => {
       <div className={`${styles.chatTopBar} d-flex flex-row`}>
         <div className="col-12 text-center d-flex flex-row justify-content-between px-2 px-lg-2">
           {/* <Image src="/chat-top-bar.png" alt="AI" width={150} height={30} /> */}
-          <h5>Raja jwellers</h5>
+          <h5>Raja jewellers</h5>
           <button
             className="close-button"
             onClick={handleCloseChat}
@@ -357,14 +357,14 @@ const LiveAgent = () => {
                 height={180}
               />
               <p className="">
-              Hello, Welcome to Raja Jwellers. Please select the language to get
+              Hello, Welcome to Raja jewellers. Please select the language to get
                 started.
               </p>
               <p className="mt-2">
-                ආයුබෝවන්, Raja Jwellers වෙත ඔබව සාදරයෙන් පිළිගනිමු. කරුණාකර ආරම්භ කිරීමට භාෂාව තෝරන්න.
+                ආයුබෝවන්, Raja jewellers වෙත ඔබව සාදරයෙන් පිළිගනිමු. කරුණාකර ආරම්භ කිරීමට භාෂාව තෝරන්න.
                 </p>
                 <p className="">
-                வணக்கம், Raja Jwellers வரவேற்கிறோம். தொடங்குவதற்கு மொழியைத் தேர்ந்தெடுக்கவும்.
+                வணக்கம், Raja jewellers வரவேற்கிறோம். தொடங்குவதற்கு மொழியைத் தேர்ந்தெடுக்கவும்.
                 </p>
 
               <div className="d-flex flex-row welcome-language-select w-100">
