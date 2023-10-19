@@ -370,7 +370,7 @@ const LiveAgent = () => {
               <div className="d-flex flex-row welcome-language-select w-100">
                 <div className="col-4 p-1">
                   <button
-                    className=" px-3 py-2 rounded"
+                    className=" px-2 text-center py-2 rounded"
                     onClick={() => {
                       setSelectedLanguage('English');
                       setMessageState((state) => ({
@@ -391,7 +391,7 @@ const LiveAgent = () => {
                 </div>
                 <div className="col-4 p-1">
                   <button
-                    className="px-2 py-2 rounded"
+                    className="px-2 text-center py-2 rounded"
                     onClick={() => {
                       setSelectedLanguage('Sinhala');
                       setMessageState((state) => ({
@@ -412,7 +412,7 @@ const LiveAgent = () => {
                 </div>
                 <div className="col-4 p-1">
                     <button
-                      className="px-3 py-2 rounded"
+                      className="px-2 text-center py-2 rounded"
                       onClick={() => {
                         setSelectedLanguage('Tamil');
                         setMessageState((state) => ({
