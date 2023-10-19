@@ -870,7 +870,21 @@ const Chatbot = () => {
             //   message.message.includes("Hmm, I'm not sure" || "හ්ම්, මට විශ්වාස නෑ." || "ஹ்ம்ம், எனக்கு உறுதியாக தெரியவில்லை") &&
             //   index === chatMessages.length - 1;
             const notSureMessages = [
-              "Hmm, I'm not sure.."
+              "Hmm, I'm not sure..",
+              "Hmm.. I'm not sure.",
+              "I'm sorry",
+              'There is no question',
+              'Sorry,',
+              'ප්රශ්නයක් නැත',
+              'මට කණගාටුයි',
+              'සමාවන්න,',
+              'හ්ම්, මට විශ්වාස නෑ',
+              'හ්ම්.. මට විශ්වාස නෑ.',
+              'கேள்வியே இல்லை',
+              'என்னை மன்னிக்கவும்',
+              'மன்னிக்கவும்,',
+              'ஹ்ம்ம், எனக்கு உறுதியாக தெரியவில்லை',
+              'ம்ம்ம்.. எனக்கு நிச்சயமில்லை.',
             ];
             const isLastApiMessageWithNotSure =
               message.type === 'apiMessage' &&
