@@ -384,6 +384,9 @@
   border-radius: 50%;
   cursor: pointer;
 }
+.inputIconContainer:hover {
+  background-color: #561f7a !important;
+}
 .inputIconContainer2 {
   position: absolute;
   bottom: 0px;

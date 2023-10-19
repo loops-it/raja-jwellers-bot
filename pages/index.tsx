@@ -48,18 +48,19 @@ export default function Home() {
       <main className={`${styles.mainContainer} container-fluid m-0 m-lg-2 p-0`}>
       <div className={`${styles.chatTopBar} d-flex flex-row `}>
         <div className="col-12 text-center d-flex flex-row justify-content-between px-2">
-        <Image
+        {/* <Image
                 src="/chat-top-bar.png"
                 alt="AI"
                 width={150}
                 height={30}
-              />
+              /> */}
+              <h5>Raja jwellers</h5>
         </div>
       </div>
         <div className={`${styles.chatContainer}  d-flex flex-column align-items-center text-center`}>
           {/* title */}
-          <Image src={'/chat-header.png'} width={100} height={120} alt="chat header image" className={` mt-2`} />
-          <Image src={'/chat-logo.png'} width={180} height={60} alt="chat header image" className={`${styles.welcomeImage} py-2`} />
+          {/* <Image src={'/Asset-1-2.png'} width={100} height={120} alt="chat header image" className={` mt-2`} /> */}
+          <Image src={'/Asset-1-2.png'} width={180} height={60} alt="chat header image" className={`${styles.welcomeImage} py-2`} />
           <p className={`mb-3 mt-2 ${styles.selectMethodtxt}`}>
             SELECT YOUR PREFERRED CHAT
           </p>

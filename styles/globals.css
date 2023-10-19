@@ -158,10 +158,14 @@ aside.EmojiPickerReact.epr-main{
   color: #111111;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
-  background-color: #cfcfcf;
+  background-color: #d197f7;
   border-radius: 8px !important;
   width: 100%;
   text-align: start;
+}
+.welcome-language-select button:hover{
+  background-color: #561f7a;
+  color: #fff;
 }
 .welcomeMessageContainer{
   font-size: 14px;

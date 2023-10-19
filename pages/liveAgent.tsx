@@ -357,14 +357,14 @@ const LiveAgent = () => {
                 height={180}
               />
               <p className="">
-                Hello, Welcome to DFCC Bank. Please select the language to get
+              Hello, Welcome to Raja Jwellers. Please select the language to get
                 started.
               </p>
               <p className="mt-2">
-                ආයුබෝවන්, DFCC බැංකුව වෙත ඔබව සාදරයෙන් පිළිගනිමු. කරුණාකර ආරම්භ කිරීමට භාෂාව තෝරන්න.
+                ආයුබෝවන්, Raja Jwellers වෙත ඔබව සාදරයෙන් පිළිගනිමු. කරුණාකර ආරම්භ කිරීමට භාෂාව තෝරන්න.
                 </p>
                 <p className="">
-                வணக்கம், DFCC வங்கிக்கு வரவேற்கிறோம். தொடங்குவதற்கு மொழியைத் தேர்ந்தெடுக்கவும்.
+                வணக்கம், Raja Jwellers வரவேற்கிறோம். தொடங்குவதற்கு மொழியைத் தேர்ந்தெடுக்கவும்.
                 </p>
 
               <div className="d-flex flex-row welcome-language-select w-100">

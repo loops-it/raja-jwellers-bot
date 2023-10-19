@@ -690,7 +690,7 @@ const Chatbot = () => {
         {/* language switch message =================*/}
         <div className={styles.botMessageContainerWrapper}>
           <div className="d-flex justify-content-center pt-1">
-            <Image src="/Asset-1-2.png" alt="AI" width={180} height={50} />
+            <Image src="/Asset-1-2.png" alt="AI" width={150} height={50} className='img-fluid' />
           </div>
 
           <div
